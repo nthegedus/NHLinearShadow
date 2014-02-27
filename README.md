@@ -1,7 +1,8 @@
 ##NHLinearShadow
 
 With NHLinearShadow you can add a shadow like this:
-<img width=237 src="https://www.dropbox.com/s/br1f58mb6pwvzpd/shadow.png"/>
+
+<img width=237 src="http://s3.amazonaws.com/Start_Apps/shadow.png"/>
 
 using a simple way!
 
@@ -18,4 +19,4 @@ You can add a near "Linear Shadow Color" choosing a color like `[UIColor redColo
 
 
 ##Example
-<img width=640 src="https://www.dropbox.com/s/b3tpk82r691olhn/example_NHLinearShadow.png"/>
+<img width=640 src="http://s3.amazonaws.com/Start_Apps/example_NHLinearShadow.png"/>

@@ -3,7 +3,7 @@
 //  NHLinearShadow
 //
 //  Created by Nathan Hegedus on 27/02/14.
-//  Updated by Luciano Nascimento on 25/04/14.
+//  Updated by Luciano Nascimento on 26/04/14.
 //  Copyright (c) 2014 Nathan Hegedus. All rights reserved.
 //
 
@@ -14,53 +14,30 @@
 #pragma mark - Public Static Methods
 + (void)addShadowWithAverageColorInImage:(UIImage *)image inImageView:(UIImageView *)imageView
 {
-    [self prepareGradientInImageView:imageView andImage:image];
+    [self addGradientLayer:imageView color:[self averageColor:image]];
 }
 
 + (void)addShadowWithColor:(UIColor *)color inImageView:(UIImageView *)imageView
 {
-    [self prepareGradientInImageView:imageView andColor:color];
+    [self addGradientLayer:imageView color:color];
 }
+
 #pragma mark - Private Static Methods
-
-+ (void)prepareGradientInImageView:(UIImageView *)imageView andImage:(UIImage *)image
++ (void)addGradientLayer:(UIImageView *)imageView color:(UIColor *)color
 {
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
     gradientLayer.frame = imageView.layer.bounds;
     
-    CGFloat hue, saturation, brightness;
-    [[self averageColor:image] getHue:&hue saturation:&saturation brightness:&brightness alpha:nil];
-    
-    gradientLayer.colors = [NSArray arrayWithObjects:
-                            (id)[UIColor colorWithHue:hue saturation:saturation brightness:0.3 alpha:0].CGColor,
-                            (id)[UIColor colorWithHue:hue saturation:saturation brightness:0.3 alpha:0].CGColor,
-                            (id)[UIColor colorWithHue:hue saturation:saturation brightness:0.3 alpha:0.9].CGColor,
-                            (id)[UIColor colorWithHue:hue saturation:saturation brightness:0.3 alpha:0.95].CGColor,
-                            nil];
-
-    [self addGradient:gradientLayer inImageView:imageView];
-}
-
-+ (void)prepareGradientInImageView:(UIImageView *)imageView andColor:(UIColor *)color
-{
-    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
-    gradientLayer.frame = imageView.layer.bounds;
-
     CGFloat hue, saturation, brightness;
     [color getHue:&hue saturation:&saturation brightness:&brightness alpha:nil];
-
+    
     gradientLayer.colors = [NSArray arrayWithObjects:
                             (id)[UIColor colorWithHue:hue saturation:saturation brightness:0.3 alpha:0].CGColor,
                             (id)[UIColor colorWithHue:hue saturation:saturation brightness:0.3 alpha:0].CGColor,
                             (id)[UIColor colorWithHue:hue saturation:saturation brightness:0.3 alpha:0.9].CGColor,
                             (id)[UIColor colorWithHue:hue saturation:saturation brightness:0.3 alpha:0.95].CGColor,
                             nil];
-
-    [self addGradient:gradientLayer inImageView:imageView];
-}
-
-+ (void)addGradient:(CAGradientLayer *)gradientLayer inImageView:(UIImageView *)imageView
-{
+    
     gradientLayer.locations = [NSArray arrayWithObjects:
                                [NSNumber numberWithFloat:0],
                                [NSNumber numberWithFloat:0.3],

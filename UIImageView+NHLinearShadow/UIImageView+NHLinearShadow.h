@@ -11,9 +11,9 @@
 @interface UIImageView (NHLinearShadow)
 
 //Send the image to get the avarege color and create the shadow, send to the ImageView to add the shadow
-+(void)addShadowWithAverageColorInImage:(UIImage *)image inImageView:(UIImageView *)imageView;
++ (void)addShadowWithAverageColorInImage:(UIImage *)image inImageView:(UIImageView *)imageView;
 
 //Send the color you want to add on UIImageView
-+(void)addShadowWithColor:(UIColor *)color inImageView:(UIImageView *)imageView;
++ (void)addShadowWithColor:(UIColor *)color inImageView:(UIImageView *)imageView;
 
 @end

@@ -25,7 +25,7 @@
 		609F837518BFE1F100336508 /* photo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 609F837118BFE1F100336508 /* photo2.jpg */; };
 		609F837618BFE1F100336508 /* photo3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 609F837218BFE1F100336508 /* photo3.jpg */; };
 		609F837718BFE1F100336508 /* photo4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 609F837318BFE1F100336508 /* photo4.jpg */; };
-		609F837B18BFE49100336508 /* UIImageView+NHLinearShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 609F837A18BFE49100336508 /* UIImageView+NHLinearShadow.m */; };
+		985BBE0A190C641000D2F2CC /* UIImageView+NHLinearShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 985BBE09190C641000D2F2CC /* UIImageView+NHLinearShadow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +62,8 @@
 		609F837118BFE1F100336508 /* photo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo2.jpg; sourceTree = "<group>"; };
 		609F837218BFE1F100336508 /* photo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo3.jpg; sourceTree = "<group>"; };
 		609F837318BFE1F100336508 /* photo4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo4.jpg; sourceTree = "<group>"; };
-		609F837918BFE49100336508 /* UIImageView+NHLinearShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+NHLinearShadow.h"; sourceTree = "<group>"; };
-		609F837A18BFE49100336508 /* UIImageView+NHLinearShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+NHLinearShadow.m"; sourceTree = "<group>"; };
+		985BBE08190C641000D2F2CC /* UIImageView+NHLinearShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+NHLinearShadow.h"; sourceTree = "<group>"; };
+		985BBE09190C641000D2F2CC /* UIImageView+NHLinearShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+NHLinearShadow.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +123,7 @@
 		609F833818BFDF3300336508 /* NHLinearShadow */ = {
 			isa = PBXGroup;
 			children = (
-				609F837818BFE49100336508 /* UIImageView+NHLinearShadow */,
+				985BBE07190C641000D2F2CC /* UIImageView+NHLinearShadow */,
 				609F834118BFDF3300336508 /* AppDelegate.h */,
 				609F834218BFDF3300336508 /* AppDelegate.m */,
 				609F834418BFDF3300336508 /* Main.storyboard */,
@@ -176,13 +176,14 @@
 			path = images;
 			sourceTree = "<group>";
 		};
-		609F837818BFE49100336508 /* UIImageView+NHLinearShadow */ = {
+		985BBE07190C641000D2F2CC /* UIImageView+NHLinearShadow */ = {
 			isa = PBXGroup;
 			children = (
-				609F837918BFE49100336508 /* UIImageView+NHLinearShadow.h */,
-				609F837A18BFE49100336508 /* UIImageView+NHLinearShadow.m */,
+				985BBE08190C641000D2F2CC /* UIImageView+NHLinearShadow.h */,
+				985BBE09190C641000D2F2CC /* UIImageView+NHLinearShadow.m */,
 			);
-			path = "UIImageView+NHLinearShadow";
+			name = "UIImageView+NHLinearShadow";
+			path = "../../UIImageView+NHLinearShadow";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				609F834918BFDF3300336508 /* ViewController.m in Sources */,
-				609F837B18BFE49100336508 /* UIImageView+NHLinearShadow.m in Sources */,
+				985BBE0A190C641000D2F2CC /* UIImageView+NHLinearShadow.m in Sources */,
 				609F834318BFDF3300336508 /* AppDelegate.m in Sources */,
 				609F833F18BFDF3300336508 /* main.m in Sources */,
 			);
